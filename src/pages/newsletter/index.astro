@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('newsletter'))
+  .filter(post => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout title="Newsletter — Causalera">
+  <Nav />
+  <main class="newsletter-page">
+    <div class="newsletter-header">
+      <h1>Newsletter</h1>
+      <p>Economics thinking, translated for the people who actually run experiments.</p>
+    </div>
+    <div class="post-list">
+      {posts.map(post => (
+        <a href={`/newsletter/${post.id}`} class="post-card">
+          <time datetime={post.data.date.toISOString()}>
+            {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+          <h2>{post.data.title}</h2>
+          <p>{post.data.description}</p>
+          <span class="read-link">Read issue →</span>
+        </a>
+      ))}
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .newsletter-page{
+    max-width:720px;margin:0 auto;
+    padding:140px 32px 88px;
+  }
+  .newsletter-header{
+    margin-bottom:60px;
+  }
+  .newsletter-header h1{
+    font-family:'DM Sans',sans-serif;font-weight:700;
+    font-size:40px;line-height:1.1;
+    color:var(--text);margin-bottom:16px;
+  }
+  .newsletter-header p{
+    font-size:17px;line-height:1.6;
+    color:var(--text-secondary);
+  }
+  .post-list{
+    display:flex;flex-direction:column;gap:24px;
+  }
+  .post-card{
+    display:block;
+    padding:32px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    background:var(--white);
+    text-decoration:none;
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .post-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 32px rgba(26,24,64,0.06);
+  }
+  .post-card time{
+    font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;
+    letter-spacing:0.5px;text-transform:uppercase;
+    color:var(--accent);
+  }
+  .post-card h2{
+    font-family:'DM Sans',sans-serif;font-weight:700;
+    font-size:24px;line-height:1.2;
+    color:var(--text);
+    margin:12px 0 8px;
+  }
+  .post-card p{
+    font-size:17px;line-height:1.6;
+    color:var(--text-secondary);
+    margin-bottom:16px;
+  }
+  .read-link{
+    font-family:'DM Sans',sans-serif;font-weight:600;font-size:17px;
+    color:var(--primary);
+  }
+</style>

@@ -1,0 +1,80 @@
+<section class="value-section" id="newsletter">
+  <div class="value-header">
+    <h2>What You Get</h2>
+    <p>Each issue picks apart a real decision-making problem through an economics lens most data teams overlook.</p>
+  </div>
+  <div class="value-grid">
+    <div class="value-card">
+      <div class="value-icon">01</div>
+      <h3>The Blind Spot</h3>
+      <p>Where standard A/B testing logic breaks — equilibrium effects, strategic responses, time-horizon mismatches — explained with real examples.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">02</div>
+      <h3>The Economics Frame</h3>
+      <p>Causal inference concepts translated for practitioners. No proofs. No jargon walls. Just the mental model and when to deploy it.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">03</div>
+      <h3>The Action Step</h3>
+      <p>Concrete takeaways: questions to ask before your next experiment, checklists for rollout decisions, frameworks you can share with leadership.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .value-section{
+    max-width:960px;margin:0 auto;
+    padding:88px 32px;
+  }
+  .value-header{
+    text-align:center;
+    margin-bottom:60px;
+  }
+  .value-header h2{
+    font-family:'DM Sans',sans-serif;font-weight:700;
+    font-size:32px;line-height:1.2;
+    color:var(--text);
+    margin-bottom:16px;
+  }
+  .value-header p{
+    font-size:17px;color:var(--text-secondary);
+    max-width:520px;margin:0 auto;
+  }
+  .value-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:32px;
+  }
+  .value-card{
+    background:var(--white);
+    border-radius:8px;
+    padding:36px 28px;
+    border:1px solid var(--border);
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .value-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 32px rgba(26,24,64,0.06);
+  }
+  .value-icon{
+    font-family:'DM Sans',sans-serif;font-weight:700;
+    font-size:32px;color:var(--accent);
+    margin-bottom:20px;
+    line-height:1;
+  }
+  .value-card h3{
+    font-family:'DM Sans',sans-serif;font-weight:700;
+    font-size:17px;line-height:1.3;
+    color:var(--text);
+    margin-bottom:12px;
+  }
+  .value-card p{
+    font-size:17px;line-height:1.6;
+    color:var(--text-secondary);
+  }
+
+  @media(max-width:768px){
+    .value-grid{grid-template-columns:1fr}
+  }
+</style>

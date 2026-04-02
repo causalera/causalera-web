@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Contact — Causalera">
+  <Nav />
+  <main class="contact-page">
+    <h1>Get in Touch</h1>
+    <p class="contact-intro">Have a question, feedback, or want to collaborate? I'd love to hear from you.</p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Email</h3>
+        <p>The best way to reach me for anything newsletter-related, speaking, or collaboration.</p>
+        <a href="mailto:vera@causalera.com" class="contact-link">vera@causalera.com</a>
+      </div>
+      <div class="contact-card">
+        <h3>LinkedIn</h3>
+        <p>Connect for professional updates and discussions about causal inference and experimentation.</p>
+        <a href="#" class="contact-link">Connect on LinkedIn →</a>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .contact-page{
+    max-width:680px;margin:0 auto;
+    padding:140px 32px 88px;
+  }
+  .contact-page h1{
+    font-family:'DM Sans',sans-serif;font-weight:700;
+    font-size:40px;line-height:1.1;
+    color:var(--text);margin-bottom:16px;
+  }
+  .contact-intro{
+    font-size:17px;line-height:1.6;
+    color:var(--text-secondary);
+    margin-bottom:48px;
+  }
+  .contact-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+  }
+  .contact-card{
+    padding:32px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    background:var(--white);
+  }
+  .contact-card h3{
+    font-family:'DM Sans',sans-serif;font-weight:700;
+    font-size:20px;color:var(--text);
+    margin-bottom:12px;
+  }
+  .contact-card p{
+    font-size:17px;line-height:1.6;
+    color:var(--text-secondary);
+    margin-bottom:16px;
+  }
+  .contact-link{
+    font-family:'DM Sans',sans-serif;font-weight:600;font-size:17px;
+    color:var(--primary);text-decoration:none;
+    transition:color 0.2s;
+  }
+  .contact-link:hover{color:var(--accent)}
+
+  @media(max-width:768px){
+    .contact-grid{grid-template-columns:1fr}
+  }
+</style>

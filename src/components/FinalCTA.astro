@@ -1,0 +1,61 @@
+<section class="final-cta" id="subscribe">
+  <div class="final-cta-inner">
+    <h2>Stop shipping experiments that don't <span class="em">survive</span></h2>
+    <p>Get the economics lens — free, biweekly, no fluff.</p>
+    <form class="hero-form" onsubmit="return false">
+      <input type="email" placeholder="your@email.com" aria-label="Email address" />
+      <button class="btn" type="submit">Subscribe Free</button>
+    </form>
+  </div>
+</section>
+
+<style>
+  .final-cta{
+    position:relative;
+    background:var(--dark-surface);
+    padding:100px 32px;
+    text-align:center;
+    overflow:hidden;
+  }
+  .final-cta::before{
+    content:'';position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 100%, rgba(61,59,142,0.5) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 40% at 80% 30%, rgba(212,85,106,0.1) 0%, transparent 50%);
+  }
+  .final-cta-inner{position:relative;z-index:2}
+  .final-cta h2{
+    font-family:'DM Sans',sans-serif;font-weight:700;
+    font-size:32px;line-height:1.15;
+    color:var(--white);
+    max-width:600px;margin:0 auto 16px;
+  }
+  .final-cta h2 .em{color:var(--accent)}
+  .final-cta p{
+    font-size:17px;color:var(--light-muted);
+    max-width:480px;margin:0 auto 36px;
+  }
+  .final-cta .hero-form{
+    max-width:440px;margin:0 auto;
+    display:flex;gap:12px;
+    justify-content:center;
+  }
+  .final-cta .hero-form input{
+    flex:1;
+    font-family:'DM Sans',sans-serif;font-size:17px;
+    padding:12px 20px;
+    border:1px solid rgba(74,71,165,0.4);
+    border-radius:8px;
+    background:rgba(255,255,255,0.06);
+    color:var(--white);
+    outline:none;
+    transition:border 0.2s;
+  }
+  .final-cta .hero-form input::placeholder{color:var(--light-muted)}
+  .final-cta .hero-form input:focus{border-color:var(--accent)}
+
+  @media(max-width:768px){
+    .final-cta h2{font-size:32px}
+    .final-cta .hero-form{flex-direction:column}
+  }
+</style>

@@ -1,0 +1,71 @@
+<section class="topics">
+  <div class="topics-inner">
+    <h2>What Gets Covered</h2>
+    <div class="topic-grid">
+      <div class="topic-item">
+        <h4>Causal Inference in Practice</h4>
+        <p>Difference-in-differences, instrumental variables, regression discontinuity — when to use what, and when the textbook answer is wrong.</p>
+      </div>
+      <div class="topic-item">
+        <h4>Experimentation Blind Spots</h4>
+        <p>Interference, spillovers, novelty effects, strategic responses — the things your A/B testing platform won't warn you about.</p>
+      </div>
+      <div class="topic-item">
+        <h4>AI Meets Economics</h4>
+        <p>How LLMs, synthetic control, and causal ML are changing what's possible — and what's still snake oil.</p>
+      </div>
+      <div class="topic-item">
+        <h4>Decision Architecture</h4>
+        <p>Building org structures and processes that turn causal evidence into actual decisions, not just dashboards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .topics{
+    background:var(--white);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+  }
+  .topics-inner{
+    max-width:960px;margin:0 auto;
+    padding:88px 32px;
+    text-align:center;
+  }
+  .topics-inner h2{
+    font-family:'DM Sans',sans-serif;font-weight:700;
+    font-size:32px;line-height:1.2;
+    color:var(--text);margin-bottom:48px;
+  }
+  .topic-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+    text-align:left;
+  }
+  .topic-item{
+    padding:28px 32px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    background:var(--bg);
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .topic-item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 32px rgba(26,24,64,0.06);
+  }
+  .topic-item h4{
+    font-family:'DM Sans',sans-serif;font-weight:700;
+    font-size:17px;color:var(--text);
+    margin-bottom:8px;
+  }
+  .topic-item p{
+    font-size:17px;line-height:1.6;
+    color:var(--text-secondary);margin:0;
+  }
+
+  @media(max-width:768px){
+    .topic-grid{grid-template-columns:1fr}
+  }
+</style>

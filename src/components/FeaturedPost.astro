@@ -1,0 +1,94 @@
+<section class="featured">
+  <div class="featured-inner">
+    <div>
+      <div class="featured-label">Latest Issue</div>
+      <h3 class="featured-title">Why Your A/B Test Might Be Lying to You</h3>
+      <p class="featured-excerpt">Your test says the pricing change increased conversions by 12%. But here's what nobody in the room is asking: what happens when your competitors respond?</p>
+      <a class="featured-link" href="/newsletter/why-your-ab-test-might-be-lying">Read this issue</a>
+    </div>
+    <div class="featured-preview">
+      <div class="pull-quote">The question isn't whether your experiment worked. It's whether the result will survive contact with the market.</div>
+      <div class="stat-row">
+        <div class="stat">
+          <div class="stat-number">67%</div>
+          <div class="stat-label">of pricing tests miss<br />equilibrium effects</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">3x</div>
+          <div class="stat-label">overestimation of<br />long-run impact</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .featured{
+    background:var(--white);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+  }
+  .featured-inner{
+    max-width:960px;margin:0 auto;
+    padding:88px 32px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:64px;
+    align-items:center;
+  }
+  .featured-label{
+    font-family:'DM Sans',sans-serif;font-size:17px;font-weight:600;
+    letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--accent);margin-bottom:16px;
+  }
+  .featured-title{
+    font-family:'DM Sans',sans-serif;font-weight:700;
+    font-size:32px;line-height:1.2;
+    color:var(--text);margin-bottom:16px;
+  }
+  .featured-excerpt{
+    font-size:17px;line-height:1.7;
+    color:var(--text-secondary);
+    margin-bottom:24px;
+  }
+  .featured-link{
+    font-family:'DM Sans',sans-serif;font-weight:600;font-size:17px;
+    color:var(--primary);text-decoration:none;
+    display:inline-flex;align-items:center;gap:6px;
+    transition:gap 0.2s;
+  }
+  .featured-link:hover{gap:10px}
+  .featured-link::after{content:'→'}
+  .featured-preview{
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:36px;
+  }
+  .featured-preview .pull-quote{
+    font-family:'DM Sans',sans-serif;font-weight:700;
+    font-size:17px;line-height:1.4;
+    color:var(--text);
+    border-left:4px solid var(--accent);
+    padding-left:24px;
+    margin-bottom:24px;
+  }
+  .featured-preview .stat-row{
+    display:flex;gap:20px;
+  }
+  .featured-preview .stat{
+    text-align:center;flex:1;
+  }
+  .featured-preview .stat-number{
+    font-family:'DM Sans',sans-serif;font-weight:700;
+    font-size:32px;color:var(--accent);
+  }
+  .featured-preview .stat-label{
+    font-size:17px;color:var(--text-secondary);
+    margin-top:4px;
+  }
+
+  @media(max-width:768px){
+    .featured-inner{grid-template-columns:1fr;gap:40px}
+  }
+</style>

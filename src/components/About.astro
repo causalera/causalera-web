@@ -1,0 +1,64 @@
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-avatar">VZ</div>
+    <div>
+      <h2>Written by Vera Zabrodina</h2>
+      <p><strong>Economist turned experimentation specialist.</strong> I spent years watching smart data teams make expensive decisions because their toolkit stopped at "p &lt; 0.05." Causalera is the bridge — economics thinking, translated for the people who actually run experiments.</p>
+      <p>I write about causal inference, experimentation design, and the places where AI and economics collide.</p>
+      <div class="credentials">
+        <span class="credential">Causal Inference</span>
+        <span class="credential">Experimentation</span>
+        <span class="credential">Economics</span>
+        <span class="credential">AI &amp; ML</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about{
+    max-width:960px;margin:0 auto;
+    padding:88px 32px;
+  }
+  .about-inner{
+    display:grid;
+    grid-template-columns:200px 1fr;
+    gap:48px;
+    align-items:start;
+  }
+  .about-avatar{
+    width:200px;height:200px;
+    background:linear-gradient(135deg,var(--dark-surface) 0%,var(--dark-mid) 100%);
+    border-radius:8px;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--light-muted);
+    font-family:'DM Sans',sans-serif;font-size:48px;font-weight:700;
+  }
+  .about h2{
+    font-family:'DM Sans',sans-serif;font-weight:700;
+    font-size:32px;line-height:1.2;
+    color:var(--text);margin-bottom:16px;
+  }
+  .about p{
+    font-size:17px;line-height:1.7;
+    color:var(--text-secondary);
+    margin-bottom:16px;
+  }
+  .about p strong{color:var(--text)}
+  .credentials{
+    display:flex;gap:24px;flex-wrap:wrap;
+    margin-top:8px;
+  }
+  .credential{
+    font-family:'DM Sans',sans-serif;font-size:17px;font-weight:600;
+    color:var(--primary);
+    padding:6px 14px;
+    background:rgba(61,59,142,0.06);
+    border-radius:20px;
+  }
+
+  @media(max-width:768px){
+    .about-inner{grid-template-columns:1fr;text-align:center}
+    .about-avatar{margin:0 auto}
+  }
+</style>
