@@ -3,10 +3,7 @@
     <div class="hero-badge">Economics &times; Experimentation &times; AI</div>
     <h1>The economics lens your <span class="em">experiments</span> are missing</h1>
     <p class="hero-sub">A newsletter for data leaders who want to make decisions that survive contact with the real world — not just pass a significance test.</p>
-    <form class="hero-form" onsubmit="return false">
-      <input type="email" placeholder="your@email.com" aria-label="Email address" />
-      <button class="btn" type="submit">Subscribe Free</button>
-    </form>
+    <a href="https://causalera.substack.com" class="btn hero-btn" target="_blank" rel="noopener">Subscribe Free</a>
     <p class="hero-proof">Free, biweekly. Join data scientists, economists, and product leaders.</p>
   </div>
 </section>
@@ -71,24 +68,13 @@
     margin-bottom:40px;
     animation:fadeUp 0.8s ease 0.2s both;
   }
-  .hero-form{
-    display:flex;gap:12px;
-    max-width:460px;
+  .hero-btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:14px 32px;
+    font-size:18px;
     animation:fadeUp 0.8s ease 0.3s both;
   }
-  .hero-form input{
-    flex:1;
-    font-family:'DM Sans',sans-serif;font-size:17px;
-    padding:12px 20px;
-    border:1px solid rgba(74,71,165,0.4);
-    border-radius:8px;
-    background:rgba(255,255,255,0.06);
-    color:var(--white);
-    outline:none;
-    transition:border 0.2s;
-  }
-  .hero-form input::placeholder{color:var(--light-muted)}
-  .hero-form input:focus{border-color:var(--accent)}
   .hero-proof{
     margin-top:20px;
     font-family:'DM Sans',sans-serif;font-size:17px;
@@ -99,6 +85,5 @@
   @media(max-width:768px){
     .hero{padding:130px 20px 80px}
     .hero h1{font-size:32px}
-    .hero-form{flex-direction:column}
   }
 </style>
